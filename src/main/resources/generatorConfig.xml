@@ -7,6 +7,8 @@
     <classPathEntry location="/Users/tongho/mysql-connector-java-5.1.32-bin.jar"/>
     <context id="testTables" targetRuntime="MyBatis3" >
         <commentGenerator>
+            <!-- @mbggenerated 生成的配置-->
+            <property name="suppressDate" value="false" />
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
@@ -30,7 +32,7 @@
 
         <!-- targetProject:生成PO类的位置 -->
         <javaModelGenerator targetPackage="com.elin4it.ssm.pojo"
-                            targetProject="/Users/tongho/Documents/webapp/src/main/java">
+                            targetProject="/Users/tongho/Documents/webtv/src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
             <!-- 从数据库返回的值被清理前后的空格 -->
@@ -38,14 +40,14 @@
         </javaModelGenerator>
         <!-- targetProject:mapper映射文件生成的位置 -->
         <sqlMapGenerator targetPackage="com.elin4it.ssm.mapper"
-                         targetProject="/Users/tongho/Documents/webapp/src/main/resources">
+                         targetProject="/Users/tongho/Documents/webtv/src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
         <!-- targetPackage：mapper接口生成的位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.elin4it.ssm.mapper"
-                             targetProject="/Users/tongho/Documents/webapp/src/main/java">
+                             targetPackage="com.elin4it.ssm.dao"
+                             targetProject="/Users/tongho/Documents/webtv/src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>

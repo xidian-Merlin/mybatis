@@ -1,13 +1,11 @@
 package com.elin4it.ssm.pojo;
 
-import java.util.Date;
-
 public class User {
     private Integer id;
 
     private String username;
 
-    private Date birthday;
+    private String password;
 
     private String sex;
 
@@ -29,12 +27,12 @@ public class User {
         this.username = username == null ? null : username.trim();
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public String getPassword() {
+        return password;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
     public String getSex() {

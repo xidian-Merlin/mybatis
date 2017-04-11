@@ -1,4 +1,4 @@
-package com.elin4it.ssm.mapper;
+package com.elin4it.ssm.dao;
 
 import com.elin4it.ssm.pojo.User;
 import com.elin4it.ssm.pojo.UserExample;
@@ -27,4 +27,8 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    User findUserByLoginName(String username);
+
+
 }
